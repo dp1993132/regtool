@@ -13,7 +13,7 @@ import (
 	"github.com/spf13/viper"
 	register_api "github.com/yottachain/YTDataNode/cmd/register-api"
 	"github.com/yottachain/YTDataNode/commander"
-	"github.com/dp1993132/RegisterWarp/configgo"
+	"github.com/dp1993132/regtool/configgo"
 	"io/ioutil"
 	"math/rand"
 	"os"
