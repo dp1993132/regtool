@@ -1,0 +1,44 @@
+# eos 地址
+baseNodeUrl: http://106.54.218.114:8888
+
+# 最大配额 GB
+maxSpace: 10
+
+# 抵押账号
+dep:
+  name: storepoolown
+  key: 5KYiJBSDXbQzNbiAY4U9xAmvFxn9hFHezQzLbbSKw6tXvY9ohPC
+# 矿机管理员账号
+miner:
+  name: username1234
+  key: 5K8kWysuW2beiUe25PyhGf4xkKeo3YkA5WZgzW6jS6Gjh3gt1CT
+
+# 矿池ID和私钥
+pool:
+  name: storepoolown
+  key: 5KYiJBSDXbQzNbiAY4U9xAmvFxn9hFHezQzLbbSKw6tXvY9ohPC
+
+# 收益账号
+beneficial:
+  name: username1234
+
+#env:
+#  - ytfs_path=/Users/mac/YTFS2
+
+# sn list
+snips:
+  - 172.18.0.2
+  - 172.18.0.3
+  - 172.18.0.4
+  - 172.18.0.5
+  - 172.18.0.6
+
+snmaddrs:
+  - /ip4/172.18.0.2/tcp/9999/p2p/16Uiu2HAm7o24DSgWTrcu5sLCgSkf3D3DQqzpMz9W1Bi7F2Cc4SF6
+  - /ip4/172.18.0.3/tcp/9999/p2p/16Uiu2HAmNe1bZF2s7msxqy9tFT7WDfUaJa98h1KBhAmTTHvcZqpA
+  - /ip4/172.18.0.4/tcp/9999/p2p/16Uiu2HAkyZAuzcjmpFhk1pCLAZaYusV3wXmrEhnnNDfeJjkVoQc6
+  - /ip4/172.18.0.5/tcp/9999/p2p/16Uiu2HAmSFq7SbwcfYVn3NzWuuV7SizQEVjKEwty1knZuzTA7jDq
+  - /ip4/172.18.0.6/tcp/9999/p2p/16Uiu2HAmC7DSN4kNi64sB5N9aMgv9DjTTrtydf4YKS3Q56hYsDNS
+
+updateUrl: http://39.97.41.155/ytnode-update-config/update-test.yaml
+

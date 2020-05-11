@@ -1,0 +1,43 @@
+baseNodeUrl: http://212.129.153.253:8888
+
+# 最大配额 GB
+maxSpace: 10
+
+
+# 抵押账号
+dep:
+  name: storepoolown
+  key: 5JkjKo4UGaTQFVuVpDZDV3LNvLrd2DgGRpTNB4E1o9gVuUf7aYZ
+# 矿机管理员账号
+miner:
+  name: username1234
+  key: 5JcDH48njDbUQLu1R8SWwKsfWLnqBpWXDDiCgxFC3hioDuwLhVx
+
+# 矿池ID和私钥
+pool:
+  name: storepoolown
+  key: 5JkjKo4UGaTQFVuVpDZDV3LNvLrd2DgGRpTNB4E1o9gVuUf7aYZ
+
+# 收益账号
+beneficial:
+  name: username1234
+
+#env:
+#  - ytfs_path=/Users/mac/YTFS2
+
+# sn list
+snips:
+  - 49.234.139.206
+  - 129.211.72.15
+  - 122.152.203.189
+  - 212.129.153.253
+  - 49.235.52.30
+
+snmaddrs:
+  - /ip4/49.234.139.206/tcp/9999/p2p/16Uiu2HAmPqE8R8U7CHRsKrNw9aVjdxUrGUEWBvNPGsVbaCBxrLkt
+  - /ip4/129.211.72.15/tcp/9999/p2p/16Uiu2HAmR7VVxjZ516FkXmjoeAaMQ5UBEtqR1xPDmFhLi1ivb5GP
+  - /ip4/122.152.203.189/tcp/9999/p2p/16Uiu2HAm1h55uTrWXATukWgMwKdYEEdSbkUpCwfSc2fznfebNcJL
+  - /ip4/212.129.153.253/tcp/9999/p2p/16Uiu2HAmCtczNYRxsUj4xi4jMGFsfxn1oKYsbSLAYNsJZkJJLgsZ
+  - /ip4/49.235.52.30/tcp/9999/p2p/16Uiu2HAmSXfk5mgmZd2YmA5Aug23vCdUesRuVEeCHSFUDeX2GxWv
+
+updateUrl: http://39.97.41.155/ytnode-update-config/update-test.yaml
