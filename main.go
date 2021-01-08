@@ -209,7 +209,7 @@ func register() {
 	txOpts := &eos.TxOptions{}
 	txOpts.FillFromChain(api.API)
 	tx := eos.NewSignedTransaction(eos.NewTransaction([]*eos.Action{action}, txOpts))
-	tx.SetExpiration(time.Hour*24)
+	tx.Expiration = eos.JSONTime{time.Now().Add(time.Hour)}
 	tx2 := signer(tx, key1)
 	err = api.PushTransactionToSN(tx2, ":8082/preregnode")
 	if err != nil {
@@ -256,7 +256,7 @@ func addPool() {
 	txOpts := &eos.TxOptions{}
 	txOpts.FillFromChain(api.API)
 	tx := eos.NewSignedTransaction(eos.NewTransaction([]*eos.Action{&action}, txOpts))
-	tx.SetExpiration(time.Hour*24)
+	tx.Expiration = eos.JSONTime{time.Now().Add(time.Hour)}
 	tx2 := signer(tx, key2, key3)
 
 
@@ -279,6 +279,8 @@ func addPool() {
 }
 
 func signer(tx *eos.SignedTransaction, keys ...string) *eos.SignedTransaction {
+	tx.Expiration = eos.JSONTime{time.Now().Add(time.Hour)}
+
 	var kb = eos.NewKeyBag()
 	for _, v := range keys {
 		if err := kb.ImportPrivateKey(v); err != nil {
