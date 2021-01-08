@@ -6,6 +6,7 @@ import (
 	"crypto/cipher"
 	"encoding/json"
 	"fmt"
+	configgo "github.com/dp1993132/regtool/configgo"
 	"github.com/eoscanada/eos-go"
 	"github.com/eoscanada/eos-go/ecc"
 	"github.com/libp2p/go-libp2p-core/peer"
@@ -13,7 +14,6 @@ import (
 	"github.com/spf13/viper"
 	register_api "github.com/yottachain/YTDataNode/cmd/register-api"
 	"github.com/yottachain/YTDataNode/commander"
-	"github.com/dp1993132/regtool/configgo"
 	"io/ioutil"
 	"math/rand"
 	"os"
@@ -209,6 +209,7 @@ func register() {
 	txOpts := &eos.TxOptions{}
 	txOpts.FillFromChain(api.API)
 	tx := eos.NewSignedTransaction(eos.NewTransaction([]*eos.Action{action}, txOpts))
+	tx.SetExpiration(time.Hour*24)
 	tx2 := signer(tx, key1)
 	err = api.PushTransactionToSN(tx2, ":8082/preregnode")
 	if err != nil {
@@ -255,6 +256,7 @@ func addPool() {
 	txOpts := &eos.TxOptions{}
 	txOpts.FillFromChain(api.API)
 	tx := eos.NewSignedTransaction(eos.NewTransaction([]*eos.Action{&action}, txOpts))
+	tx.SetExpiration(time.Hour*24)
 	tx2 := signer(tx, key2, key3)
 
 

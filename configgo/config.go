@@ -1,4 +1,4 @@
-package configgo
+package config
 
 import (
 	"bytes"
@@ -8,10 +8,11 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/multiformats/go-multiaddr"
 	"github.com/spf13/viper"
-	"github.com/yottachain/YTDataNode/logger"
 	"io/ioutil"
+	"log"
 	"os"
 	"path"
+	"strings"
 	"time"
 
 	ci "github.com/libp2p/go-libp2p-crypto"
@@ -74,6 +75,7 @@ func DefaultYTFSOptions() *ytfsOpts.Options {
 	opts.TotalVolumn = 2 << 41
 	opts.IndexTableCols = 1 << 14
 	opts.IndexTableRows = 1 << 28
+	opts.UseKvDb = true
 	return opts
 }
 
@@ -100,6 +102,7 @@ func GetYTFSOptionsByParams(size uint64, n uint32) *ytfsOpts.Options {
 		IndexTableRows: uint32(n),
 		DataBlockSize:  d,
 		TotalVolumn:    size,
+		UseKvDb:        true,
 	}
 	return opts
 }
@@ -332,11 +335,19 @@ func (cfg *Config) GetBPIndex() int {
 		return 0
 	}
 	bpindex := id % uint32(bpnum)
+
+	//log.Printf("len bplist:%d ,id %d, bpindex %d\n", bpnum, id, bpindex)
 	return int(bpindex)
 }
 
 // ReadConfig 读配置
 func ReadConfig() (*Config, error) {
+	defer func() {
+		err := recover()
+		if err != nil {
+			log.Println("读取配置失败部分功能不可用")
+		}
+	}()
 	var cfg Config
 	data, err := ioutil.ReadFile(util.GetConfigPath())
 	if err != nil {
@@ -369,7 +380,7 @@ func (cfg *Config) PrivKeyString() string {
 }
 
 func (cfg *Config) Version() uint32 {
-	return 3
+	return 65
 }
 
 func Version() uint32 {
@@ -379,4 +390,18 @@ func Version() uint32 {
 func (cfg Config) ResetYTFSOptions(opts *ytfsOpts.Options) Config {
 	cfg.Options = opts
 	return cfg
+}
+
+func (cfg Config) GetAPIAddr() string {
+	bpIndex := cfg.GetBPIndex()
+	//ma, err := multiaddr.NewMultiaddr(cfg.BPList[bpIndex].Addrs[0])
+	//if err != nil {
+	//	return ""
+	//}
+	addrs := strings.Split(cfg.BPList[bpIndex].Addrs[0], "/")
+	//addr, err := manet.ToNetAddr(ma)
+	//if err != nil {
+	//	return ""
+	//}
+	return fmt.Sprintf("http://%s:%s", addrs[2], "8082")
 }

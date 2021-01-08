@@ -1,4 +1,4 @@
-baseNodeUrl: http://212.129.153.253:8888
+baseNodeUrl: http://dnapi1.yottachain.net:8888
 
 # 最大配额 GB
 maxSpace: 10
@@ -7,16 +7,16 @@ maxSpace: 10
 # 抵押账号
 dep:
   name: storepoolown
-  key: 5JkjKo4UGaTQFVuVpDZDV3LNvLrd2DgGRpTNB4E1o9gVuUf7aYZ
+  key:
 # 矿机管理员账号
 miner:
   name: username1234
-  key: 5JcDH48njDbUQLu1R8SWwKsfWLnqBpWXDDiCgxFC3hioDuwLhVx
+  key:
 
 # 矿池ID和私钥
 pool:
   name: storepoolown
-  key: 5JkjKo4UGaTQFVuVpDZDV3LNvLrd2DgGRpTNB4E1o9gVuUf7aYZ
+  key:
 
 # 收益账号
 beneficial:
@@ -27,17 +27,49 @@ beneficial:
 
 # sn list
 snips:
-  - 49.234.139.206
-  - 129.211.72.15
-  - 122.152.203.189
-  - 212.129.153.253
-  - 49.235.52.30
+  - sn00.yottachain.net
+  - sn01.yottachain.net
+  - sn02.yottachain.net
+  - sn03.yottachain.net
+  - sn04.yottachain.net
+  - sn05.yottachain.net
+  - sn06.yottachain.net
+  - sn07.yottachain.net
+  - sn08.yottachain.net
+  - sn09.yottachain.net
+  - sn10.yottachain.net
+  - sn11.yottachain.net
+  - sn12.yottachain.net
+  - sn13.yottachain.net
+  - sn14.yottachain.net
+  - sn15.yottachain.net
+  - sn16.yottachain.net
+  - sn17.yottachain.net
+  - sn18.yottachain.net
+  - sn19.yottachain.net
+  - sn20.yottachain.net
 
 snmaddrs:
-  - /ip4/49.234.139.206/tcp/9999/p2p/16Uiu2HAmPqE8R8U7CHRsKrNw9aVjdxUrGUEWBvNPGsVbaCBxrLkt
-  - /ip4/129.211.72.15/tcp/9999/p2p/16Uiu2HAmR7VVxjZ516FkXmjoeAaMQ5UBEtqR1xPDmFhLi1ivb5GP
-  - /ip4/122.152.203.189/tcp/9999/p2p/16Uiu2HAm1h55uTrWXATukWgMwKdYEEdSbkUpCwfSc2fznfebNcJL
-  - /ip4/212.129.153.253/tcp/9999/p2p/16Uiu2HAmCtczNYRxsUj4xi4jMGFsfxn1oKYsbSLAYNsJZkJJLgsZ
-  - /ip4/49.235.52.30/tcp/9999/p2p/16Uiu2HAmSXfk5mgmZd2YmA5Aug23vCdUesRuVEeCHSFUDeX2GxWv
+  - /dns4/sn00.yottachain.net/tcp/9999/p2p/16Uiu2HAm7o24DSgWTrcu5sLCgSkf3D3DQqzpMz9W1Bi7F2Cc4SF6
+  - /dns4/sn01.yottachain.net/tcp/9999/p2p/16Uiu2HAmNe1bZF2s7msxqy9tFT7WDfUaJa98h1KBhAmTTHvcZqpA
+  - /dns4/sn02.yottachain.net/tcp/9999/p2p/16Uiu2HAkyZAuzcjmpFhk1pCLAZaYusV3wXmrEhnnNDfeJjkVoQc6
+  - /dns4/sn03.yottachain.net/tcp/9999/p2p/16Uiu2HAmSFq7SbwcfYVn3NzWuuV7SizQEVjKEwty1knZuzTA7jDq
+  - /dns4/sn04.yottachain.net/tcp/9999/p2p/16Uiu2HAmC7DSN4kNi64sB5N9aMgv9DjTTrtydf4YKS3Q56hYsDNS
+  - /dns4/sn05.yottachain.net/tcp/9999/p2p/16Uiu2HAmSFgs5Pj6hFdAzCAvFGH78ew7egakT6VqL1xaLdvxnnSc
+  - /dns4/sn06.yottachain.net/tcp/9999/p2p/16Uiu2HAmP2RuNAkXdtQDiFqVuBA8yERh91JV6b29rQpAGKkb3PiM
+  - /dns4/sn07.yottachain.net/tcp/9999/p2p/16Uiu2HAmJQ7cjPzi7u4NdgYK7xWqDgEVBqAqNPrmxY2KVKGpND2W
+  - /dns4/sn08.yottachain.net/tcp/9999/p2p/16Uiu2HAmDKteRvgXPtzz3pvhGn56HH7uo8WqoGqJWPArY4G1kuWP
+  - /dns4/sn09.yottachain.net/tcp/9999/p2p/16Uiu2HAmDpQ6527dqtiv5fixTptQBtGa561BZeUTDuALiAZwQNGR
+  - /dns4/sn10.yottachain.net/tcp/9999/p2p/16Uiu2HAmATZsCop9hkKDbmtyLbizLQU92jrCVpWvzRChKRQbwzy7
+  - /dns4/sn11.yottachain.net/tcp/9999/p2p/16Uiu2HAmGheSFhwbpihhEnyZUxsVr6Rn9z5v2XDMeEyAfK2K4nwG
+  - /dns4/sn12.yottachain.net/tcp/9999/p2p/16Uiu2HAm2JANbeeaXDa9JaDTU5Q1h2hmjJGJx91LpYd36pdoDWdx
+  - /dns4/sn13.yottachain.net/tcp/9999/p2p/16Uiu2HAm3Cmzqg9TKR6FvEH5NSgzLZgDZb4xtPC9aYhqbc9p7WM5
+  - /dns4/sn14.yottachain.net/tcp/9999/p2p/16Uiu2HAm2CzizQh2AU8NXK5z2bvJUaFuPiM9Z6R1uDEFKDvob4mJ
+  - /dns4/sn15.yottachain.net/tcp/9999/p2p/16Uiu2HAmTd1jqEGLThwcrD9yYG1JsHHj7qsDJDBcdgMLMvaBnksU
+  - /dns4/sn16.yottachain.net/tcp/9999/p2p/16Uiu2HAmHufUv4udcL1f1bNP4r6VqDBppmKH495iQKSgv6nWGoZA
+  - /dns4/sn17.yottachain.net/tcp/9999/p2p/16Uiu2HAmKS35S4JQk8BDUvgWhjGLMJ1f9zWJhT3QeRRyFdReXeue
+  - /dns4/sn18.yottachain.net/tcp/9999/p2p/16Uiu2HAmUyPbR4wcKtGi6n84CGkHsXsHZZ2sGrnhJPAqJmFCMfDW
+  - /dns4/sn19.yottachain.net/tcp/9999/p2p/16Uiu2HAmLUCp92e25HXiZW8fMwpCUfhQRcNGL7PibTDtg51JTRCq
+  - /dns4/sn20.yottachain.net/tcp/9999/p2p/16Uiu2HAmBG1d8HHBApLg9MrDqgUX4LoKcFCSCrq54QW3mkqRheo1
 
-updateUrl: http://39.97.41.155/ytnode-update-config/update-test.yaml
+#updateUrl: http://39.97.41.155/ytnode-update-config/update-test.yaml
